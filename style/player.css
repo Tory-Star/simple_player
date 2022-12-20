@@ -148,7 +148,95 @@
 .player__icon_stop:hover,
 .player__icon_prev:hover,
 .player__icon_pause:hover,
+.player__icon_play:hover,
 .player__icon_next:hover,
 .player__icon_like:hover{
     background: white;
+}
+
+.player__icon_pause{
+    background-image: url("../img/Pause.svg");
+}
+.player__icon_play{
+    background-image: url("../img/Play.svg");
+}
+
+@media (max-width: 1024px){
+    .player__container{
+        grid-template-columns: 1fr 1fr 2fr 1fr;
+    }
+}
+
+@media (max-width: 968px){
+    .player{
+        right: 34px;
+        left: 34px;
+        padding: 22px 60px;
+        border-radius: 30px;
+
+    }
+    .player_active{
+        bottom: 24PX;
+    }
+    .player__container{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 27px 20px;
+    }
+    .player__progress-wrap{
+        order: 1;
+        grid-column: 1 / -1;
+    }
+    .player__progress{
+        max-width: none;
+    }
+    .player__controller{
+        justify-content: center;
+    }
+    .player__volume-wrap{
+        justify-self: end;
+    }
+}
+
+@media (max-width: 740px){
+    .player{
+
+        border-radius: 20px 20px 0 0;
+
+    }
+
+    .player__progress-wrap{
+        padding-left: 0;
+    }
+    .player_active{
+        bottom: 0PX;
+    }
+    .player__container{
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    .player__volume-wrap{
+        display: none;
+    }
+    .player__controller{
+        justify-self: end;
+    }
+
+}
+
+@media (max-width: 560px){
+    .player{
+        left: 0;
+        right: 0;
+        gap: 16px;
+        padding: 16px 15px;
+    }
+
+    .player__container{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .player__controller{
+        justify-self: center;
+    }
+
 }
